@@ -66,7 +66,7 @@ Class ReportHandler{
     
         $connection ->close();
         
-      }
+      }https://prod.liveshare.vsengsaas.visualstudio.com/join?366777A228E5BCF1DFEEC89A1D8D6EC6D20B
     
     
       //The $Pilots now contain all the pilotsnames from the database. The foreach spilts them into individual names. 

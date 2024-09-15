@@ -377,7 +377,7 @@
 				<?php
 					include "ReportHandler.php";
 					$obj = new ReportHandler();
-					$pilots= $obj ->https://prod.liveshare.vsengsaas.visualstudio.com/join?366777A228E5BCF1DFEEC89A1D8D6EC6D20BgetPilot()
+					$pilots= $obj ->getPilot()
 					?>
 					<h3>
 					
