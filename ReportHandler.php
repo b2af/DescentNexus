@@ -1,4 +1,10 @@
 <?php
+
+
+
+Class ReportHandler{
+
+
 /////////////////////////SQL insert to database here//////////////////////////////////////////////////////
 
 
@@ -66,7 +72,7 @@
       //The $Pilots now contain all the pilotsnames from the database. The foreach spilts them into individual names. 
       foreach ($pilots as $pilotName):
   
-        //print each indivdual name. 
+        //print each indivdual name.
        echo $pilotName . "<br>";
   
         endforeach;
@@ -77,5 +83,8 @@
   
     
     }
-
     
+}
+    
+
+  
