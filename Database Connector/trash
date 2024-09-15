@@ -1,0 +1,75 @@
+$serverName = "descentnexus.com";
+$userName= "hahypsmy_b2af";
+$password= '$INtheair!114866#';
+$databaseName= "hahypsmy_RDL";
+
+//create the conneciton
+$connection = new $mysqli($serverName, $userName, $password, $databaseName);
+
+// Check connection
+if ($connection){
+  die("Connection Failed".mysqli_connect_errno());
+
+}
+echo "Connection Successful!";
+
+
+"name": "b2af@descentnexus.com",
+		"host": "ftp.hah.yps.mybluehost.me",
+		"port": 21,
+		"type": "ftp",
+		"username": "b2af@descentnexus.com",
+		"password": "$INtheair!114866#",
+		"autosave": true,
+		"confirm": true,
+		"path": "/"
+
+
+
+___________________________________________________________________________________________________________________
+		if(mysqli_connect_errno())
+{
+  die ("Connection Error: ". mysqli_connect_error());
+
+}
+
+else
+{
+  echo "Connection Successful";
+}
+
+
+$sql = "INSERT INTO hahypsmy_RDL ('PilotName', 'email', 'Password') VALUES ('b2af', 'brian2af@outlook.com', '123456789')";
+Echo "Test after SQL";
+if (mysqli_query($connection,$sql))
+{
+  echo "Data Inserted Sucessfully";
+}
+else
+{
+  echo "Error". $sql . "</br>" . mysqli_error($connection);
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+<label for="email">Email:</label><br>
+              <input type="email" id="email" name="email" ><br>
+
+              <label for="pilot">pilot:</label><br>
+              <input type="text" id="pilot" name="pilot"><br>
+            
+              <label for="pilotPassword">pilotPassword:</label><br>
+              <input type="password" id="pilotPassword" name="pilotPassword" ><br>
