@@ -36,19 +36,26 @@
   
   
   function getPilot(){
-  
+    //The DBConnector.php contains the logic to connect to the database. You can just include it here so we don't have to write the same code twice. 
     include 'DBConnector.php';
     
-    
+    //This is the SQL statement to get all the players from the database. 
       $sql = "SELECT PilotName FROM Player ";
+    // contains the result of the all the pilots. 
       $result = $connection -> query($sql); 
-    
+      //Establishes the pilot array.      
       $pilots=[];
     
-    
+        //If the result is greater than 0,  continue. 
         if ($result->num_rows>0) {
+          //As long as the result has something to pull from,  continue 
           while($row = $result ->fetch_assoc()) {
-          $pilots[] = $row;
+            {
+              //PilotName is being pulled from the database and its being feed to the pilots array. 
+              $pilots[] = $row['PilotName'];
+              
+            }
+            
         }
     
         $connection ->close();
@@ -56,11 +63,18 @@
       }
     
     
+      //The $Pilots now contain all the pilotsnames from the database. The foreach spilts them into individual names. 
+      foreach ($pilots as $pilotName):
+  
+        //print each indivdual name. 
+       echo $pilotName . "<br>";
+  
+        endforeach;
       
-      $pilots=print_r(getPilot());
-      return $pilots;
-
-
+        
+     
+      
+  
     
     }
 
