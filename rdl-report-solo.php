@@ -1,4 +1,7 @@
+<?php
 
+
+?>
 
 
 <!DOCTYPE html>
@@ -369,19 +372,46 @@
 			<div class="hrcontainer2">
 
 				<div class="label">
+
+
+				<?php
+					include "ReportHandler.php";
+					$obj = new ReportHandler();
+					$pilots= $obj ->https://prod.liveshare.vsengsaas.visualstudio.com/join?366777A228E5BCF1DFEEC89A1D8D6EC6D20BgetPilot()
+					?>
 					<h3>
+					
+
 						Winner:
 					</h3>
 				</div>
 
 
+			
+				<select>
 
-				<select name="Pilots">
 
-				<!-- I added this in for a test. -->
-					<option value="Pilot1"> B2af</option>
-					<option value="Pilot2"> code</option>
-				</select>
+				
+
+
+						
+				
+
+
+					
+							
+					<option value="test"><?php
+						 $pilots
+					?>
+					</option>
+
+
+					
+
+					
+
+				</select>	
+				
 
 				
 					
