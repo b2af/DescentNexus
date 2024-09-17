@@ -1,16 +1,10 @@
-<?php
-
-
-?>
-
-
 <!DOCTYPE html>
 <html>
 
 <head>
 	<meta charset="utf-8">
 	<title>
-		RDL - Solo's
+		RDL - Report <!--Changed from rdl solo. -->
 	</title>
 	<link href="cloak.ico" rel="shortcut icon" type="image/x-icon">
 	<style>
@@ -328,16 +322,17 @@
 				<a href="./rdl.html">Ladder</a>
 			</li>
 			<li>
-				<a href="./rdl-report-solo.html">Report</a>
+				<a href="./rdl-report-solo.php">Report</a><!--Changed from HTML to PHP-->
 			</li>
-			<li>
-				<a href="./rules.html">Rules</a>
-			</li>
+			
 			<li>
 				<a href="./recent-matches.html">Recent Matches</a>
 			</li>
 			<li>
-				<a href="#">Records</a>
+				<a href="#">Stats</a>
+			</li>
+			<li>
+				<a href="./rules.html">Rules</a>
 			</li>
 		</ul>
 	</nav>
@@ -365,148 +360,123 @@
 					onclick="window.location.href='coming-soon.html'">CTF</button>
 				<hr style="height: 3px; background-color: white; width: 100%; margin: 0 auto; border-radius: 0px;">
 			</div>
-			<br>
-			<br>
-			<br>
+	
 			<br>
 			<div class="hrcontainer2">
 
-				<div class="label">
-
-
-				<?php
+				
+						<!--references the Reporthandler, then creates a new reporthnadler object for processing. -->
+					<?php
 					include "ReportHandler.php";
 					$obj = new ReportHandler();
-					$pilots= $obj ->https://prod.liveshare.vsengsaas.visualstudio.com/join?366777A228E5BCF1DFEEC89A1D8D6EC6D20BgetPilot()
+
+					//$pilots contains the pilot array from the reporthandler.php.  
+					$pilots = $obj->getPilot();
+
 					?>
-					<h3>
-					
 
-						Winner:
-					</h3>
-				</div>
-
-
-			
 				<select>
 
+					<!--Since there are alot of pilots, lol. You have to output one at at time. Foreach does the job. $pilots contain all the pilots. $pilotname contains one pilot.  -->
+					<?php foreach ($pilots as $pilotName) { ?> <!--PHP foreach, then close the php script. HTML option then another PHP script.-->
+						<option><?php echo $pilotName['PilotName']; ?></option><!--Since we are working with arrays the only way to display one pilot name is to echo [pilotname]. PilotName is the Column from the database and is in the select statement in Reporthandler.php.  -->
 
-				
-
-
-						
-				
-
-
-					
-							
-					<option value="test"><?php
-						 $pilots
-					?>
-					</option>
+					<?php  } ?>
 
 
-					
+					</select>
 
-					
-
-				</select>	
-				
-
-				
-					
-					
-				</div>
-				<div class="label Kills-label">
-					<span>Kills:&nbsp;&nbsp;</span> <input
-						onblur="if(this.value === '') { this.value = 'XX'; this.classList.add('grey-placeholder'); }"
-						onfocus="if(this.value === 'XX') { this.value = ''; this.classList.remove('grey-placeholder'); }"
-						oninput="validateInput(this)"
-						style="width: 30px; text-align: center; font-size: 16px; color: gray; border-radius: 5px;"
-						type="text" value="XX">
-				</div>
-				<div class="label Deaths-label">
-					<span>Deaths:&nbsp;&nbsp;</span> <input
-						onblur="if(this.value === '') { this.value = 'XX'; this.classList.add('grey-placeholder'); }"
-						onfocus="if(this.value === 'XX') { this.value = ''; this.classList.remove('grey-placeholder'); }"
-						oninput="validateInput(this)"
-						style="width: 30px; text-align: center; font-size: 16px; color: gray; border-radius: 5px;"
-						type="text" value="XX">
-				</div>
 			</div>
+			<div class="label">
+				<span>Kills:&nbsp;&nbsp;</span> <input
+					onblur="if(this.value === '') { this.value = 'XX'; this.classList.add('grey-placeholder'); }"
+					onfocus="if(this.value === 'XX') { this.value = ''; this.classList.remove('grey-placeholder'); }"
+					oninput="validateInput(this)"
+					style="width: 30px; text-align: center; font-size: 16px; color: gray; border-radius: 5px;"
+					type="text" value="XX">
+			</div>
+			<div class="label">
+				<span>Deaths:&nbsp;&nbsp;</span> <input
+					onblur="if(this.value === '') { this.value = 'XX'; this.classList.add('grey-placeholder'); }"
+					onfocus="if(this.value === 'XX') { this.value = ''; this.classList.remove('grey-placeholder'); }"
+					oninput="validateInput(this)"
+					style="width: 30px; text-align: center; font-size: 16px; color: gray; border-radius: 5px;"
+					type="text" value="XX">
+			</div>
+		</div>
 
-			<br>
-			<br>
-			<br>
-			<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<div class="hrcontainer2">
+			<div class="label">
+				<h3>
+					Loser:
+				</h3>
+			</div>
+			<div class="label">
+				&nbsp;&nbsp;&nbsp;&nbsp;You&nbsp;&nbsp;&nbsp;&nbsp;
+			</div>
 			<div class="hrcontainer2">
-				<div class="label">
-					<h3>
-						Loser:
-					</h3>
-				</div>
-				<div class="label">
-					&nbsp;&nbsp;&nbsp;&nbsp;You&nbsp;&nbsp;&nbsp;&nbsp;
-				</div>
-				<div class="label Kills-label">
-					<span>Kills:&nbsp;&nbsp;</span> <input
-						onblur="if(this.value === '') { this.value = 'XX'; this.classList.add('grey-placeholder'); }"
-						onfocus="if(this.value === 'XX') { this.value = ''; this.classList.remove('grey-placeholder'); }"
-						oninput="validateInput(this)"
-						style="width: 30px; text-align: center; font-size: 16px; color: gray; border-radius: 5px;"
-						type="text" value="XX">
-				</div>
-				<div class="label Deaths-label">
-					<span>Deaths:&nbsp;&nbsp;</span> <input
-						onblur="if(this.value === '') { this.value = 'XX'; this.classList.add('grey-placeholder'); }"
-						onfocus="if(this.value === 'XX') { this.value = ''; this.classList.remove('grey-placeholder'); }"
-						oninput="validateInput(this)"
-						style="width: 30px; text-align: center; font-size: 16px; color: gray; border-radius: 5px;"
-						type="text" value="XX">
+				<span>Kills:&nbsp;&nbsp;</span> <input
+					onblur="if(this.value === '') { this.value = 'XX'; this.classList.add('grey-placeholder'); }"
+					onfocus="if(this.value === 'XX') { this.value = ''; this.classList.remove('grey-placeholder'); }"
+					oninput="validateInput(this)"
+					style="width: 30px; text-align: center; font-size: 16px; color: gray; border-radius: 5px;"
+					type="text" value="XX">
+			</div>
+			<div class="label Deaths-label">
+				<span>Deaths:&nbsp;&nbsp;</span> <input
+					onblur="if(this.value === '') { this.value = 'XX'; this.classList.add('grey-placeholder'); }"
+					onfocus="if(this.value === 'XX') { this.value = ''; this.classList.remove('grey-placeholder'); }"
+					oninput="validateInput(this)"
+					style="width: 30px; text-align: center; font-size: 16px; color: gray; border-radius: 5px;"
+					type="text" value="XX">
+			</div>
+		</div>
+		<br>
+		<br>
+		<br>
+		<br>
+		<hr style="height: 3px; background-color: white; width: 100%; margin: 0 auto; border-radius: 0px;">
+		<br>
+		<br>
+		<div style="display: flex; justify-content: center; align-items: center;">
+			<div
+				style="text-align: center; color: white; font-family: Tahoma, Arial, sans-serif; background-color: transparent; padding: 15px; border-radius: 10px; width: 400px; margin-right: 20px;">
+				<div style="display: flex; align-items: center">
+					<label for="comment">Comment:</label>
+					<div class="commentbox" id="level"
+						style="type=&quot;text&quot;; border-radius: 5px; padding: 50px; margin-left: -7px; width: 300px; resize: none">
+						<textarea class="cols=&quot;100&quot;" rows="10"
+							style="resize: none; width: 300px"></textarea>
+					</div>
 				</div>
 			</div>
-			<br>
-			<br>
-			<br>
-			<br>
-			<hr style="height: 3px; background-color: white; width: 100%; margin: 0 auto; border-radius: 0px;">
-			<br>
-			<br>
+
 			<div style="display: flex; justify-content: center; align-items: center;">
 				<div
-					style="text-align: center; color: white; font-family: Tahoma, Arial, sans-serif; background-color: transparent; padding: 15px; border-radius: 10px; width: 400px; margin-right: 20px;">
-					<div style="display: flex; align-items: center">
-						<label for="comment">Comment:</label>
-						<div class="commentbox" id="level"
-							style="type=&quot;text&quot;; border-radius: 5px; padding: 50px; margin-left: -7px; width: 300px; resize: none">
-							<textarea class="cols=&quot;100&quot;" rows="10"
-								style="resize: none; width: 300px"></textarea>
-						</div>
-					</div>
-				</div>
-
-				<div style="display: flex; justify-content: center; align-items: center;">
-					<div
-						style="text-align: center; color: white; font-family: Tahoma, Arial, sans-serif; font-size: 13px; background-color: transparent none; padding: 10px; border-radius: 10px; width: 250px;">
-						<label for="level">Level:</label> <input id="level" placeholder="Enter level"
-							style="border-radius: 5px; padding: 5px;" type="text">
-					</div>
-				</div>
-
-				<div
-					style="display: flex; justify-content: center; align-items: center; color: white; font-size: 13px;  margin-right:10px;">
-					<label for="level" style="display: flex; align-items: center;">Recording Link:&nbsp;&nbsp;</label>
-					<input id="level" placeholder="(This is optional)" style="border-radius: 5px; padding: 5px;"
-						type="text ">
-				</div>
-
-
-				<div
-					style="display: flex; justify-content: center; align-items: center; color: white; font-size: 13px; margin-right: 10px;">
-					<label for="level" style="display: flex; align-items: center;">Tracker Link:&nbsp;&nbsp;</label>
-					<input id="level" placeholder="(This is not optional)" class="red-text" type="text">
+					style="text-align: center; color: white; font-family: Tahoma, Arial, sans-serif; font-size: 13px; background-color: transparent none; padding: 10px; border-radius: 10px; width: 250px;">
+					<label for="level">Level:</label> <input id="level" placeholder="Enter level"
+						style="border-radius: 5px; padding: 5px;" type="text">
 				</div>
 			</div>
+
+			<div
+				style="display: flex; justify-content: center; align-items: center; color: white; font-size: 13px;  margin-right:10px;">
+				<label for="level" style="display: flex; align-items: center;">Recording Link:&nbsp;&nbsp;</label>
+				<input id="level" placeholder="(This is optional)" style="border-radius: 5px; padding: 5px;"
+					type="text ">
+			</div>
+
+
+			<div
+				style="display: flex; justify-content: center; align-items: center; color: white; font-size: 13px; margin-right: 10px;">
+				<label for="level" style="display: flex; align-items: center;">Tracker Link:&nbsp;&nbsp;</label>
+				<input id="level" placeholder="(This is not optional)" class="red-text" type="text">
+			</div>
+		</div>
 		</div>
 
 		<div style="display: flex; justify-content: center; align-items: center;">

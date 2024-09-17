@@ -46,7 +46,7 @@ Class ReportHandler{
     include 'DBConnector.php';
     
     //This is the SQL statement to get all the players from the database. 
-      $sql = "SELECT PilotName FROM Player ";
+      $sql = "SELECT PilotName  FROM Player ";
     // contains the result of the all the pilots. 
       $result = $connection -> query($sql); 
       //Establishes the pilot array.      
@@ -58,33 +58,34 @@ Class ReportHandler{
           while($row = $result ->fetch_assoc()) {
             {
               //PilotName is being pulled from the database and its being feed to the pilots array. 
-              $pilots[] = $row['PilotName'];
+              $pilots[] = $row;
               
             }
-            
-        }
+           
     
-        $connection ->close();
-        
-      }
-    
-    
-      //The $Pilots now contain all the pilotsnames from the database. The foreach spilts them into individual names. 
-      foreach ($pilots as $pilotName):
-  
-        //print each indivdual name.
-       echo $pilotName . "<br>";
-  
-        endforeach;
       
+
+      }
+
+      //Close the database
+      $connection ->close();
+
+      //Returns an array of pilots
+      return $pilots;
+    
+    
         
      
       
-  
+        
     
     }
-    
+  }
 }
+
+
     
 
-  
+
+
+
