@@ -1,0 +1,141 @@
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            position: relative;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/GalleryPics/1500x500.jfif");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100vh;
+            margin: 0;
+        }
+        
+
+        .hero-image {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .hero-text {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 25px;
+            white-space: nowrap;
+            color: #fff;
+        }
+
+    .circle-container {
+        position: fixed;
+        bottom: 30px; /* Adjust the distance from the bottom as needed */
+        left: 50%;
+        transform: translateX(-50%);
+        width: 30px; /* Adjust the width and height to change the circle size */
+        height: 30px;
+        border-radius: 50%; /* Create a circular shape */
+        background-color: white; /* Change background color to create a circle */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .arrow-down {
+        position: fixed;
+        bottom: 10px; /* Adjust the distance from the bottom as needed */
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 0;
+        border-left: 7px solid transparent;
+        border-right: 7px solid transparent;
+        border-top: 10px solid black; /* Adjust border color and size to change arrow appearance */
+    }
+
+        /* Define styles for the navigation bar */
+        .nav {
+            position: fixed;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            width: 10%;
+            z-index: 2;
+            background-color: transparent;
+            padding: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .nav a {
+            color: white;
+            display: block;
+            padding: 10px;
+            font-size: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease; /* Adding transition effect */
+        }
+
+        .nav a:hover {
+            color: purple;
+            background-color: rgba(255, 255, 255, 0.1); /* Chanage background color on hover */
+            border-radius: 5px; /* Add rounded corners to buttons */
+        }
+
+        .nav-title {
+            color: white;
+            font-size: 45px;
+            font-weight: bold;
+            margin: 10px;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 2); /* Adding shadow effect */
+        }
+        
+        /*bubble for login confirmation -- here b2! - Code*/
+        
+    .bubble {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      background-color: green;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      cursor: pointer; 
+      transition: opacity 2.0s ease; 
+      border: 2px solid black;
+    }
+
+    .hidden {
+      opacity: 0; /* Initially hide the bubble */
+    }
+    
+        .nav-notification
+        {
+            color: white;
+            display: block;
+            padding: 10px;
+            font-size: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease; /* Adding transition effect */
+            border: 1px solid red;
+            border-radius: 5px;
+        }
+        
+        .nav-notification a:hover {
+              color: purple;
+            background-color: rgba(255, 255, 255, 0.1); /* Chanage background color on hover */
+            border-radius: 5px; /* Add rounded corners to buttons */
+        }
+        
+        .badge {
+          position: absolute;
+          top: 430px;
+          right: -7px;
+          padding: 3px 8px;
+          border-radius: 50%;
+          background-color: red;
+          color: white;
+          font-family: Tahoma;
+        } 
