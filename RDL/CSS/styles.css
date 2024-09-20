@@ -29,18 +29,18 @@ body {
 
 
   /* Navigation bar styling */
-       nav {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            background-color: #333;
-            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 2.0)), url("image.png");
-            height: 80px;
-            padding: 0 20px;
-            font-family: Arial, sans-serif;
-            font-size: 18px;
-        }
+        nav {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: relative;
+          background-color: #333;
+          background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 2.0)), url("../GalleryPics/image.png");
+          height: 80px;
+          padding: 0 20px;
+          font-family: Arial, sans-serif;
+          font-size: 18px;
+      }
 
         nav::before {
             content: "";
@@ -255,4 +255,12 @@ body {
     inset: 0 0 auto auto;
     transform-origin: 0 0;
     transform: translate(29.3%) rotate(45deg);
+  }
+
+  .centered-image {
+    opacity: 0.05; /* Adjust the opacity value as needed */
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
   }

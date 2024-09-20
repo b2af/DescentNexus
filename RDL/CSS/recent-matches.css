@@ -1,0 +1,302 @@
+body {
+    background-image: url('/RDL/GalleryPics/backgroundrdl.png');
+    background-size: 100%;
+    background-position: center;
+    background-repeat: cover;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    padding: 0;
+    font-family: Helvetica, sans-serif;
+    
+  }
+  .outer-container {
+    display: flex;
+    flex-direction: column; /* Ensure content is stacked vertically */
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Set the desired tinted black color and opacity */
+    padding: 50px;
+    border: 2px solid gray; /* Set the desired border style */
+    margin: 0 auto; /* Center horizontally */
+    border-radius: 10px; /* Adjust the border radius value as needed */
+    width: 90%; /* Adjusted width */
+}
+
+  
+  .table-container {
+      width: 85%;
+      border-radius: 30px; /* Adjust the border radius value as needed */
+      background-color: #efefef; /* Set the desired background color */
+  }
+
+  h3 
+  {
+    color: white; 
+    text-align: center; 
+    font-size: 30px; 
+    text-transform: uppercase;
+    font-weight: bold; 
+    border-bottom: 2px solid; white; 
+    padding-bottom: 10px;"
+    justify-content: top;
+  }
+  
+  table {
+      border-collapse: collapse;
+      width: 100%;
+  }
+  
+  th, td {
+      border: 2px solid black;
+        border-radius: 15px; /* Adjust the border radius value as needed */
+      padding: 8px;
+      text-align: center;
+      font-family: Tahoma, sans-serif;
+  }
+  
+  th {
+      background-color: #f2f2f2;
+  }
+  
+  /* Navigation bar styling */
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: #333;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 2.0)), url("../GalleryPics/image.png");
+    height: 80px;
+    padding: 0 20px;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+  }
+  
+        nav::before {
+            content: "";
+            position: absolute;
+            top: 90%;
+            left: 0;
+            right: 0;
+            height: 10px; /* Adjust the height of the gray bar as needed */
+            background-color: gray; /* Set the desired background color */
+        }
+  
+  
+  
+/* Menu styling */
+ul {
+ display: flex;
+ margin: 0;
+ padding: 0;
+ list-style: none;
+}
+
+li {
+ margin-left: 40px;
+}
+
+a {
+ color: #fff;
+ text-decoration: none;
+ text-transform: uppercase;
+ font-weight: bold;
+ letter-spacing: 1px;
+ text-shadow: 0 0 0 transparent;
+}
+
+a:hover {
+ text-shadow: 0 0 10px rgba(255, 255, 255, 1);
+}
+
+accountbutton:hover {
+   text-shadow: 0 0 10px rgba(255, 255, 255, 1);
+}
+
+.hero-title {
+ text-align: center;
+}
+
+.hero-title h1 {
+ text-align: center;
+}
+
+.hero-title h3 {
+ font-size: 36px;
+ position: relative;
+ display: inline-block;
+ color: #eee;
+}
+
+ 
+.footer {
+ position: absolute;
+ right: 0;
+ bottom: 0;
+ left: 0;
+ background-color: #333;
+ background-image: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 2.0)), url("image.png");
+ color: white;
+ text-align: center;
+ height: 80px;
+ justify-content: center;
+ font-family: tahoma;
+ font-size: 15px;
+ display: flex;
+ align-items: center;
+}
+
+.footer::before {
+ content: "";
+ position: absolute;
+ top: -10px; /* Adjust the distance from the footer as needed */
+ left: 0;
+ right: 0;
+ height: 10px; /* Adjust the height of the gray bar as needed */
+ background-color: gray; /* Set the desired background color */
+}
+
+.button:hover {
+ text-shadow: 0 0 10px #000000;
+}
+
+
+/*---------------Nav + Footer-----------------------------------------------------------------------------------------------------*/
+
+     .hrcontainer {
+           position: relative;
+         }
+     
+     .hrbutton {
+           position: absolute;
+           top: -30px; /* Adjust the value as needed */
+           left: 50%;
+           transform: translateX(-50%);
+           border: 5px solid transparent; /* Increased border width to 2px */
+           border-top-color: white;
+           border-left-color: white;
+           border-right-color: white;
+           border-bottom: none; /* Remove the bottom border */
+           background-color: white;
+           color: black; /* Added white font color */
+           padding: 3px 30px; /* Adjust the padding values as needed */
+           cursor: pointer;
+           font-family: Tahoma, Arial, sans-serif;
+           font-size: 18px;
+           border-radius: 8px 8px 0 0; /* Set the border radius for each corner */
+         } 
+         
+
+/*---------------Report Section-----------------------------------------------------------------------------------------------------*/
+
+  .profile-picture1 {
+   background-image: none; /* Replace 'your-image-url.jpg' with the URL of your own image */
+   width: 60px;
+   height: 60px;
+   border-radius: 50%;
+   background-color: gray;
+   color: white;
+ }
+ 
+ .profile-picture2 {
+   width: 60px;
+   height: 60px;
+   border-radius: 50%;
+   background-color: gray;
+   color: white;
+ }
+ 
+ .label {
+   display: flex;
+   align-items: center;
+   color: white;
+ }
+ 
+ .name {
+   color: white;
+   font-size: 21px; /* Increase the font size */
+ }
+ 
+ .score-label {
+   color: white;
+   font-size: 21px; /* Increase the font size */
+   
+ }
+ 
+ .suicides-label {
+   color: white;
+   font-size: 21px; /* Increase the font size */
+ }
+ 
+ .hrcontainer2 {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 200px;
+   font-size: 21px; /* Increase the font size */
+
+ }
+ 
+ 
+ .editablebox[contenteditable="true"] {
+   width: 35px; /* Adjust the width as desired */
+   background-color: white;
+   color: purple;
+   font-family: Helvetica, Arial, sans-serif;
+   font-size: 21px;
+   border-radius: 5px;
+   text-align:center;
+ }
+ 
+   .select-container {
+     flex: 0;
+   }
+   
+ .red-text {
+     color: red;
+   } 
+   
+.red-text,
+   .red-text::placeholder {
+     color: red;
+   }
+     
+.ribbon-1 {
+ position: absolute;
+ background: white;
+ box-shadow: 0 0 0 999px white;
+ clip-path: inset(0 -100%);
+ color: black;
+ z-index: 2;
+}
+.left {
+ inset: 0 auto auto 0;
+ transform-origin: 100% 0;
+ transform: translate(-29.3%) rotate(-45deg);
+}
+.right {
+ inset: 0 0 auto auto;
+ transform-origin: 0 0;
+ transform: translate(29.3%) rotate(45deg);
+}
+
+.centered-image {
+ opacity: 0.05; /* Adjust the opacity value as needed */
+   position: relative;
+   left: 50%;
+   transform: translate(-50%, -0%);
+}
+
+.top {
+ text-decoration: uppercase;
+ padding: 10px;
+ font-family: sans-serif;
+ color: white;
+ background: purple;
+ border-radius: 50px;
+ position: fixed;
+ bottom: 2%;
+ right: 2%;
+ z-index: 1;
+}

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <title>Descent Nexus</title>
+    <link rel="shortcut icon" type="image/x-icon" href="cloak.ico">
+    <style>
+        /* Main content */
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .hero-image {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("1500x500.jfif");
+            background-position: center;
+            background-size: cover;
+        }
+
+        .hero-text {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 25px;
+            white-space: nowrap;
+            color: #fff;
+        }
+
+        .arrow-down {
+            position: absolute;
+            bottom: -200px;
+            right: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-top: 20px solid white;
+        }
+
+        /* Define styles for the navigation bar */
+        .nav {
+            position: fixed;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            width: 10%;
+            z-index: 2;
+            background-color: transparent;
+            padding: 20px;
+            /*border: 2px solid #555;*/
+            /*border-radius: 10px;*/
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .nav a {
+            color: white;
+            display: block;
+            padding: 10px;
+            font-size: 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .nav a:hover {
+            color: purple;
+        }
+
+        .nav-title {
+            color: white;
+            font-size: 45px;
+            font-weight: bold;
+            margin: 10px;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 2); /* Adding shadow effect */
+        }
+        
+        .outer-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 50px;
+            border: 6px solid white;
+            border-radius: 10px;
+            width: 40%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        .hrcontainer {
+    		  position: relative;
+    	}
+		      
+	    .hrbutton {
+		            position: absolute;
+		            top: -120px; /* Adjust the value as needed */
+		            left: 50%;
+		            transform: translateX(-50%);
+		            border: 5px solid transparent; /* Increased border width to 2px */
+		            border-top-color: white;
+		            border-left-color: white;
+		            border-right-color: white;
+		            border-bottom: none; /* Remove the bottom border */
+		            background-color: white;
+		            color: black; /* Added white font color */
+		            padding: 3px 30px; /* Adjust the padding values as needed */
+		            cursor: pointer;
+		            font-family: Tahoma, Arial, sans-serif;
+		            font-size: 18px;
+		            border-radius: 8px 8px 0 0; /* Set the border radius for each corner */
+        }     
+        
+    </style>
+</head>
+
+<body>
+    <!-- Background + Text -->
+    <div class="hero-image">
+        <div class="nav">
+            <h1 class="nav-title">Descent Nexus</h1>
+            <hr>
+            <a href="./index.html">Nexus</a>
+            <a href="./rdl.html">RDL</a>
+            <a href="">News</a>
+            <a href="#">Project D</a>
+            <hr>
+            <a href="./login.html">Login</a>
+            <a href="./signup.html">Sign up</a>
+            <a href="./inbox.html">Notifications</a>
+        </div>
+    </div>
+    
+    <div class="outer-container">
+            <div class="hrcontainer">
+              <button class="hrbutton" style="left: 57px; margin-top: 35px;" onclick="window.location.href='news.html'">News</button> 
+              <button class="hrbutton" style="left: 190px; margin-top: 35px;" onclick="window.location.href='versions.html'">Versions</button>
+              <button class="hrbutton" style="left:  347px; margin-top: 35px; box-shadow: inset 0 0 5px 2px rgba(0, 0, 0, 0.5); height: 30px;" onclick="window.location.href='community.html'">Community</button>
+              <button class="hrbutton" style="left: 490px; margin-top: 35px;" onclick="window.location.href='staff.html'">Staff</button>
+             
+              <h1 class="hero-title" style="color: purple;">RDL Expectations, and Rules</h1>
+        <h2 class="hero-title" style="color: white;">Cheating</h2>
+        <p1 style="color: white;">
+            Because the competitive nature of a 1v1 Ladder, alongside trackers, and demo/streams, there are a few precautions that may take place to prevent cheating. 
+            Do know, that the majority of this community is familiar with the common methods of cheating and rarely go unnoticed by seasoned veterans. You will eventually be caught. 
+            Cheating warrants an admin-based discretion response, but expect nothing less than a ban. Also, amenable to all participants.
+        </p1>
+        
+        <br>
+        <br>
+        <br>
+        
+        <h2 class="hero-title" style="color: white;">Descent Version</h2>
+        <p1 style="color: white;">
+            While you play on this Ladder, it will primarily use the port Descent Redux, due to the current development, modern features it offers in contrast to older ports like Rebirth,
+        </p1>
+        
+        <p1 style="color: white;">
+            and Retro. The use of other versions will not be tolerated unless approved by admins. The file size of your .EXE should ALWAYS match your opponents.
+        </p1>
+    </div>
+</div>
+</body>
+
+</html>

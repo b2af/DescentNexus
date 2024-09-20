@@ -43,7 +43,7 @@ Class ReportHandler{
   
   function getPilot(){
     //The DBConnector.php contains the logic to connect to the database. You can just include it here so we don't have to write the same code twice. 
-    include 'DBConnector.php';
+    include '../DBConnector.php';
     
     //This is the SQL statement to get all the players from the database. 
       $sql = "SELECT PilotName  FROM Player ";
