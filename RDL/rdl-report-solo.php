@@ -72,6 +72,7 @@
 			<br>
 			<br>
 			<br>
+			
 			<div class="hrcontainer2">
 				<div class="label">
 					<h3>
@@ -89,12 +90,12 @@
                     
                     </select>
 				</div>
-				<div class="label score-label">
+				<div class="label score-label" Name = "WinnerScore">
 					<span>Score:&nbsp;&nbsp;</span> <input onblur="if(this.value === '') { this.value = 'XX'; this.classList.add('grey-placeholder'); }" onfocus=
 					"if(this.value === 'XX') { this.value = ''; this.classList.remove('grey-placeholder'); }" oninput="validateInput(this)" style=
 					"width: 30px; text-align: center; font-size: 16px; color: gray; border-radius: 5px;" type="text" value="XX">
 				</div>
-				<div class="label suicides-label">
+				<div class="label suicides-label" Name = "WinnerSuicides">
 					<span>Suicides:&nbsp;&nbsp;</span> <input onblur="if(this.value === '') { this.value = 'XX'; this.classList.add('grey-placeholder'); }" onfocus=
 					"if(this.value === 'XX') { this.value = ''; this.classList.remove('grey-placeholder'); }" oninput="validateInput(this)" style=
 					"width: 30px; text-align: center; font-size: 16px; color: gray; border-radius: 5px;" type="text" value="XX">
@@ -114,12 +115,12 @@
 				<div class="label">
 					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 				</div>
-				<div class="label score-label">
+				<div class="label score-label" Name="LoserScore">
 					<span>Score:&nbsp;&nbsp;</span> <input onblur="if(this.value === '') { this.value = 'XX'; this.classList.add('grey-placeholder'); }" onfocus=
 					"if(this.value === 'XX') { this.value = ''; this.classList.remove('grey-placeholder'); }" oninput="validateInput(this)" style=
 					"width: 30px; text-align: center; font-size: 16px; color: gray; border-radius: 5px;" type="text" value="XX">
 				</div>
-				<div class="label suicides-label">
+				<div class="label suicides-label" Name="LoserSuicides">
 					<span>Suicides:&nbsp;&nbsp;</span> <input onblur="if(this.value === '') { this.value = 'XX'; this.classList.add('grey-placeholder'); }" onfocus=
 					"if(this.value === 'XX') { this.value = ''; this.classList.remove('grey-placeholder'); }" oninput="validateInput(this)" style=
 					"width: 30px; text-align: center; font-size: 16px; color: gray; border-radius: 5px;" type="text" value="XX">
@@ -135,7 +136,7 @@
                <div style="display: flex; justify-content: center; align-items: center;">
           <div style="text-align: center; color: white; font-family: Tahoma, Arial, sans-serif; background-color: transparent; padding: 15px; border-radius: 10px; width: 400px; margin-right: 20px;">
             <div style="display: flex; align-items: center">
-              <label for="comment">Comment:</label>
+              <label for="comment" Name="Comment">Comment:</label>
               <div class="commentbox" id="level" style="type=&quot;text&quot;; border-radius: 5px; padding: 50px; margin-left: -7px; width: 300px; resize: none">
                 <textarea class="cols=&quot;100&quot;" rows="10" style="resize: none; width: 300px"></textarea>
               </div>
@@ -144,25 +145,25 @@
 
     	<div style="display: flex; justify-content: center; align-items: center;">
 				<div style="text-align: center; color: white; font-family: Tahoma, Arial, sans-serif; font-size: 13px; background-color: transparent none; padding: 10px; border-radius: 10px; width: 250px;">
-					<label for="level">Level:</label> <input id="level" placeholder="Enter level" style="border-radius: 5px; padding: 5px;" type="text">
+					<label for="level" Name="Level">Level:</label> <input id="level" placeholder="Enter level" style="border-radius: 5px; padding: 5px;" type="text" name="level" method="post"
 				</div>
 			</div>
 			
 		<div style="display: flex; justify-content: center; align-items: center; color: white; font-size: 13px;  margin-right:10px;">
-                <label for="level" style="display: flex; align-items: center;">Recording Link:&nbsp;&nbsp;</label>
+                <label for="level" Name="RecordingLink"style="display: flex; align-items: center;">Recording Link:&nbsp;&nbsp;</label> <!--Check the name syntax-->
                 <input id="level" placeholder="(This is optional)" style="border-radius: 5px; padding: 5px;" type="text ">
 			</div>
 
 		
 	   <div style="display: flex; justify-content: center; align-items: center; color: white; font-size: 13px; margin-right: 10px;">
-                <label for="level" style="display: flex; align-items: center;">Tracker Link:&nbsp;&nbsp;</label>
+                <label for="level" Name="TrackerLink" style="display: flex; align-items: center;" >Tracker Link:&nbsp;&nbsp;</label>
                 <input id="level" placeholder="(This is not optional)" class="red-text" type="text">
 		</div>
 	   </div>
 	  </div>
 	  
 	  	<div style="display: flex; justify-content: center; align-items: center;">
-			<button style="padding: 15px 30px; border-radius: 5px; background-color: #333; color: white; font-family: Tahoma, Arial, sans-serif; font-size: 18px;" type="submit">Submit</button>
+			<button style="padding: 15px 30px; border-radius: 5px; background-color: #333; color: white; font-family: Tahoma, Arial, sans-serif; font-size: 18px;" type="Submit">Submit</button>
 			
     	<br>
 		<br>

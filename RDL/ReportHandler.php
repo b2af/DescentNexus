@@ -81,11 +81,54 @@ Class ReportHandler{
     
     }
   }
-}
 
 
+
+  function SubmitReport($PilotName, $WinnerScore, $WinnerSuicides, $LoserSuicides, $LoserScore, $Comments, $Level, $MatchID, $RecordingLink, $TrackerLink  )
+  {
+     
+    include '../DBConnector.php';
+   
     
 
+    $PilotName = $_POST['$PilotName'];
+    $WinnerScore = $_POST['$WinnerSuicides'];
+    $LoserSuicides = $_POST['$LoserSuicides'];
+    $LoserScore = $_POST['$LoserScore'];
+    $MatchID = $_POST['$MatchID'];
+  
+    $sqlPilot = "INSERT INTO Player (PilotName, WinnerScore, WinnerSuicides, LoserSuicides, LoserScore, MatchId) VALUES ('$PilotName', '$WinnerScore', '$WinnerSuicides', '$LoserSuicides', '$LoserScore $MatchID)";
+
+    $result = $connection -> query($sql); 
+
+      
+    if(isset($_POST["submit"])){
+      
+          echo "Success";
+      }
+
+
+    /*  
+
+    $sqlMatch = "INSERT INTO Match (PilotName, WinnerScore, WinnerSuicides, LoserSuicides, LoserScore, Comments, Level, RecordingLink, TrackerLink)
+            VALUES ('$pilot', '$WinnerScore', '$WinnerSuicides', '$LoserSuicides', '$LoserScore', '$Comments', '$Level', '$RecordingLink', '$TrackerLink')";
+
+    $PilotName = $_POST['$PilotName'];
+    $WinnerScore = $_POST['$PilotName'];
+    $WinnerSuicides = $_POST['$PilotName'];
+    $LoserSuicides = $_POST['$PilotName'];
+    $LoserScore = $_POST['$PilotName'];
+    $Comments = $_POST['$PilotName'];
+    $Level = $_POST['$PilotName'];
+    $RecordingLink = $_POST['$PilotName'];
+    $TrackerLink = $_POST['$PilotName'];
+
+"*/
+    
+    }
+
+
+  }
 
 
 
