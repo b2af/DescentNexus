@@ -4,18 +4,11 @@
 
 Class ReportHandler{
 
-
+ 
 /////////////////////////SQL insert to database here//////////////////////////////////////////////////////
 
 
 
-// For inserting into the database use later.
-//$pilot = $_POST['pilot'];
-  /*
-
-  $email = $_POST['email'];
-  $pilotPassword = $_POST['pilotPassword'];
-  */
   
   function addPilot ($connection, $pilot, $email, $pilotPassword) {
   
@@ -84,50 +77,67 @@ Class ReportHandler{
 
 
 
-  function SubmitReport($PilotName, $WinnerScore, $WinnerSuicides, $LoserSuicides, $LoserScore, $Comments, $Level, $MatchID, $RecordingLink, $TrackerLink  )
+  function SubmitReport()
   {
-     
+
+     //TODO: #13 Must fix log in system in order to fix report page.  
     include '../DBConnector.php';
    
+    //All the fields on the report page. 
+    $PilotName = htmlspecialchars($_POST['PilotName']);
+    $WinnerScore = htmlspecialchars($_POST['WinnerScore']);
+    $WinnerSuicides = htmlspecialchars($_POST['WinnerSuicides']);
+     $LoserSuicides = htmlspecialchars($_POST['LoserSuicides']);
+     $LoserScore = htmlspecialchars($_POST['LoserScore']);
+     $Level = htmlspecialchars($_POST['Level']);
+     $RecordingLink = htmlspecialchars($_POST['RecordingLink']);
+     $TrackerLink= htmlspecialchars($_POST['TrackerLink']);
+     $Comments= htmlspecialchars($_POST['Comments']);
+ 
+
     
 
-    $PilotName = $_POST['$PilotName'];
-    $WinnerScore = $_POST['$WinnerSuicides'];
-    $LoserSuicides = $_POST['$LoserSuicides'];
-    $LoserScore = $_POST['$LoserScore'];
-    $MatchID = $_POST['$MatchID'];
-  
-    $sqlPilot = "INSERT INTO Player (PilotName, WinnerScore, WinnerSuicides, LoserSuicides, LoserScore, MatchId) VALUES ('$PilotName', '$WinnerScore', '$WinnerSuicides', '$LoserSuicides', '$LoserScore $MatchID)";
+      //If the server recieves a request method of 'POST contiue. 
+    if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-    $result = $connection -> query($sql); 
-
+      //echo var_dump($_POST); Used for trouble shooting purposes. 
       
-    if(isset($_POST["submit"])){
-      
-          echo "Success";
-      }
+      //SQL statement for to insert pilot in the match table. 
+
+      $sql = "INSERT INTO `Match` (Pilot, WinnerScore) VALUES ('$PilotName', '$WinnerScore')";
+      //TODO:Put #14 in input validation for these text fields: Use as references: https://tryphp.w3schools.com/showphp.php?filename=demo_form_validation_required
 
 
-    /*  
+        //the error handleing for the new record 
+        if ($connection->query($sql) === TRUE) {
+          echo "New record created successfully";
+        } else {
+          echo "Error: " . $sql . "<br>" . $connection->error;
+        }
+        
+        $connection->close();
+    
+        
+    }
 
-    $sqlMatch = "INSERT INTO Match (PilotName, WinnerScore, WinnerSuicides, LoserSuicides, LoserScore, Comments, Level, RecordingLink, TrackerLink)
-            VALUES ('$pilot', '$WinnerScore', '$WinnerSuicides', '$LoserSuicides', '$LoserScore', '$Comments', '$Level', '$RecordingLink', '$TrackerLink')";
-
-    $PilotName = $_POST['$PilotName'];
-    $WinnerScore = $_POST['$PilotName'];
-    $WinnerSuicides = $_POST['$PilotName'];
-    $LoserSuicides = $_POST['$PilotName'];
-    $LoserScore = $_POST['$PilotName'];
-    $Comments = $_POST['$PilotName'];
-    $Level = $_POST['$PilotName'];
-    $RecordingLink = $_POST['$PilotName'];
-    $TrackerLink = $_POST['$PilotName'];
-
-"*/
+   
     
     }
 
+    
 
+
+ 
+  }
+
+
+  if ($_SERVER['REQUEST_METHOD'] == 'POST')
+  {
+    $reportHandler = new ReportHandler();
+  
+  // Call the SubmitReport method from the instance
+    $reportHandler->SubmitReport();
+    
   }
 
 
