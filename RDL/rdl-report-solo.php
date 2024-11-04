@@ -161,7 +161,7 @@
 
     	<div style="display: flex; justify-content: center; align-items: center;">
 				<div style="text-align: center; color: white; font-family: Tahoma, Arial, sans-serif; font-size: 13px; background-color: transparent none; padding: 10px; border-radius: 10px; width: 250px;">
-					<label for="level" >Level:</label> <input id="level" Name = "Level" placeholder="Enter level" style="border-radius: 5px; padding: 5px;" type="text" name="level" method="post"
+					<label for="level" >Level:</label> <input id="level" Name = "Level" placeholder="Enter level" style="border-radius: 5px; padding: 5px;" type="text" name="Level" method="post"
 				</div>
 			</div>
 			

@@ -109,15 +109,14 @@ Class ReportHandler{
 
 
         //the error handleing for the new record 
-        if ($connection->query($sql) === TRUE) {
-          echo "New record created successfully";
+        if ($connection->query($sql) === TRUE) 
+        { 
+          header("Location: rdl.html");
+           exit(); 
         } else {
-          echo "Error: " . $sql . "<br>" . $connection->error;
-        }
-        
-        $connection->close();
-    
-        
+           echo "Error: " . $sql . "<br>" . $connection->error; 
+        } 
+          $connection->close;
     }
 
    
